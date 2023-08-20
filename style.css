@@ -1,0 +1,731 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: 0.2s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../projectI/images/1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.4s ease-in-out;
+}
+header.scrolled {
+  background-color: black;
+  opacity: 0.98;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 18px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease-in-out;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: crimson;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+  color: black;
+}
+.logo {
+  margin: 0;
+  padding-left: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+.logo a span {
+  color: red;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50);
+  text-align: center;
+  color: white;
+}
+.content h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  font-size: 1.2rem;
+}
+.donateBtn {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+  border: 2px solid crimson;
+  background: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  color: white;
+}
+.donateBtn:hover {
+  background-color: crimson;
+}
+
+.container {
+  text-decoration: none;
+  background-color: crimson;
+  padding: 15px 9%;
+  padding-bottom: 100px;
+}
+.container .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: white;
+  text-shadow: 0 5px 10px black;
+  font-size: 50px;
+}
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+}
+.container .box-container .box {
+  box-shadow: 0 5px 10px black;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.container .box-container .box img {
+  height: 250px;
+}
+.container .box-container .box .btn {
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+.container .box-container .box .btn:hover {
+  color: black;
+  background: transparent;
+  border: 1.5px crimson solid;
+}
+.container .box-container .box:hover {
+  box-shadow: 0 10px 15px black;
+  transform: scale(1.03);
+}
+.section {
+  display: flex;
+  margin: auto;
+  padding: 25px;
+  justify-content: space-around;
+}
+.section img {
+  width: 60%;
+  padding: 20px;
+  height: 500px;
+}
+.section p {
+  font-size: 22px;
+  padding: 5px;
+}
+.section h1 {
+  margin-top: 15px;
+  font-size: 40px;
+  text-shadow: 0 5px 5px grey;
+}
+.section2 {
+  padding: 20px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+}
+.section2 img {
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.need {
+  background-color: crimson;
+  height: 350px;
+  width: 900px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 15px black;
+}
+.need h1 {
+  padding-top: 15px;
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
+}
+.need p {
+  padding: 25px;
+  font-size: 20px;
+  color: white;
+}
+.req {
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 12px;
+  display: inline-block;
+  background: black;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.don {
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 12px;
+  margin-left: 10px;
+  display: inline-block;
+  background: white;
+  color: black;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.req:hover {
+  background: transparent;
+  border: 2px solid white;
+  color: black;
+  transition: 1.2 ease-in-out;
+}
+.don:hover {
+  background: transparent;
+  border: 2px solid black;
+  color: white;
+  transition: 1.2 ease-in-out;
+}
+
+.footer {
+  margin: 15px 10px;
+  padding: 10px;
+  display: flex;
+  background-color: crimson;
+  width: 100%;
+  color: white;
+  height: 30vh;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.footer a {
+  font-weight: 700;
+}
+.footer a span {
+  color: black;
+  font-weight: 700;
+}
+.info {
+  padding-top: 10px;
+  align-items: center;
+}
+.info h3 {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.endimg img {
+  height: 26vh;
+}
+.copyright {
+  text-align: center;
+  font-size: 20px;
+}
+.to-top {
+  background: white;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all.4s;
+}
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+/* CSS for Bank.html */
+
+.navbar-bank {
+  width: 100%;
+  background-color: crimson;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.4s ease-in-out;
+}
+.navbar-bank ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 18px;
+  position: relative;
+}
+.navbar-bank ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s ease-in-out;
+}
+
+.navbar-bank ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.navbar-bank ul li:hover::after {
+  width: 100%;
+  color: white;
+}
+
+.banks-info {
+  width: 100%;
+  display: flex;
+  padding-top: 15px;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 55px;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 50vh;
+  color: white;
+  height: 40vh;
+  background-color: crimson;
+  border-radius: 0 0 35% 35%;
+}
+
+.headline {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headline h1 {
+  padding-top: 12px;
+  text-align: center;
+  width: 50%;
+  background-color: crimson;
+  height: 10vh;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px black;
+}
+
+.banks {
+  margin: 35px 15px;
+  padding: 15px;
+  border: 5px solid rgb(241, 121, 145);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  align-items: center;
+}
+.blocks {
+  padding: 20px;
+  height: 22vh;
+  background-color: rgb(252, 167, 170);
+  text-align: center;
+}
+.logo-bank {
+  margin: 0;
+  padding-left: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo-bank a {
+  text-decoration: none;
+  color: white;
+}
+.logo-bank a span {
+  color: black;
+}
+.location {
+  text-decoration: none;
+  background-color: crimson;
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* For Donation Form */
+.form-headline {
+  margin: 20px;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+.form-fill {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(255, 50, 91);
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  margin-bottom: 55px;
+}
+.form-fill img {
+  width: 40%;
+  padding: 20px;
+  height: 90vh;
+}
+.form-fill .form-don {
+  width: 60%;
+  margin: 10px;
+  padding: 15px 12px;
+  margin-top: 30px;
+  height: 100%;
+}
+
+.form-don label {
+  font-size: 18px;
+  font-weight: 550;
+}
+.form-don .input-box {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0 15px;
+}
+.gender {
+  margin-top: 20px;
+  column-gap: 5px;
+}
+.gender label,
+input {
+  cursor: pointer;
+}
+.bloodgroup {
+  margin-top: 20px;
+}
+.bloodgroup select {
+  width: 15%;
+  height: 25px;
+}
+.submit {
+  width: 100%;
+  padding-left: 300px;
+}
+.submit button {
+  font-size: 18px;
+  padding: 8px;
+  width: 300px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+/* ADMIN PANEL CODES */
+.admin {
+  width: 100%;
+  background: #e5e7eb;
+  position: relative;
+}
+#menu {
+  background-color: black;
+  width: 300px;
+  height: 100%;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#menu .items {
+  margin-top: 40px;
+}
+#menu .items li {
+  list-style: none;
+  padding: 15px 0;
+  transition: 0.4s ease;
+}
+#menu .items li:hover {
+  background: #253047;
+  cursor: pointer;
+}
+#menu .items li:nth-child(n):hover {
+  border-left: 4px solid white;
+}
+#menu .items li i {
+  color: rgb(134, 141, 151);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 10px 0 25px;
+}
+#menu .items li:hover i,
+#menu .items li:hover a {
+  color: white;
+}
+#menu .items li a {
+  text-decoration: none;
+  color: rgb(134, 141, 151);
+  font-weight: 300px;
+  transition: 0.4s ease;
+}
+.admin {
+  display: flex;
+  position: relative;
+}
+#interface {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  position: relative;
+}
+#interface .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px 30px;
+  border-bottom: 3px solid crimson;
+  position: fixed;
+  width: calc(100% - 300px);
+}
+#interface .navigation .search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #d7dbe6;
+  border-radius: 4px;
+}
+#interface .navigation .search i {
+  margin-right: 14px;
+}
+#interface .navigation .search input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+#interface .navigation .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#interface .navigation .profile i {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#interface .navigation .profile img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.i-name {
+  color: black;
+  padding: 30px 30px 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 70px;
+}
+.values {
+  padding: 30px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.values .val-box {
+  background: white;
+  width: 270px;
+  padding: 16px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.values .val-box:hover {
+  box-shadow: 0 5px 10px rgb(193, 187, 187);
+  transform: scale(1.03);
+}
+.values .val-box i {
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  margin-right: 15px;
+}
+.values .val-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.values .val-box p {
+  font-size: 18px;
+  color: #828997;
+}
+.board {
+  width: 94%;
+  margin: 30px 0 30px 30px;
+  opacity: auto;
+  background-color: white;
+  border-radius: 8px;
+}
+.board h1 {
+  padding: 10px;
+  font-size: 25px;
+}
+.board img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.board .donor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  border-bottom: 1px solid #eef0f3;
+}
+thead td {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #f9fafb;
+  padding: 15px;
+  text-align: start;
+}
+tbody tr td {
+  padding: 10px 16px;
+}
+.edit a {
+  text-decoration: none;
+  font-size: 16px;
+  color: blue;
+}
+
+/* For request form */
+.req-form {
+  margin: 15px;
+  padding: 20px;
+  display: flex;
+}
+.req-form img {
+  width: 700px;
+  border-radius: 15px;
+}
+.fillform {
+  width: 700px;
+  margin-left: 35px;
+  padding: 10px;
+  background: #e01861;
+  border-radius: 5px;
+}
+.fillform label {
+  margin-top: 18px;
+  font-size: 18px;
+  display: flex;
+}
+.fillform i {
+  padding: 5px;
+}
+
+.fillform .form-input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+.requestBtn button {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 200px;
+}
