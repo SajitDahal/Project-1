@@ -28,8 +28,8 @@ include("Connection.php");
           <ul class="link">
             <li><a href="HomePage.html">Home</a></li>
             <li><a href="banks.html">Find Blood Bank</a></li>
-            <li><a href="donate.html">Register as a Donor</a></li>
-            <li><a href="request.html">Request</a></li>
+            <li><a href="donate.php">Register as a Donor</a></li>
+            <li><a href="request.php">Request</a></li>
             <li><a href="adminlogin.php">Admin</a></li>
 
           </ul>
@@ -68,7 +68,8 @@ include("Connection.php");
     </select><br>
      <label for="text"><i class="fa-solid fa-comment-dots"></i>Message:</label><br>
      <textarea name="message" class="form-input" id="message" cols="30" rows="10"></textarea>
-      <div class="requestBtn"><button type="submit" name="submit">Submit</button></div>
+      <div class="requestBtn">
+        <button type="submit" name="submit">Submit</button></div>
             </form>
            </div>
         </div>            
