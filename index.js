@@ -22,4 +22,35 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// For Delete Confirmation
+// For Filtering the Bank table
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterTable = document.getElementById("location");
+  const filterBtn = document.getElementById("filterBtn");
+  const table = document.getElementById("bankList");
+  const errMsg = document.getElementById("errMsg");
+
+  filterBtn.addEventListener("click", function () {
+    const selectedValue = filterTable.value;
+
+    const rows = table.getElementsByTagName("tr");
+    let found = false;
+    for (let i = 1; i < rows.length; i++) {
+      const row = rows[i];
+      const cell = row.getElementsByTagName("td")[2];
+
+      if (selectedValue === "all" || cell.textContent === selectedValue) {
+        row.style.display = "";
+        found = true;
+      } else {
+        row.style.display = "none";
+      }
+    }
+
+    if (found) {
+      errMsg.style.display = "none";
+    } else {
+      errMsg.style.display = "block";
+    }
+  });
+});

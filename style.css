@@ -404,6 +404,13 @@ header.scrolled {
   font-weight: 500;
   align-items: center;
 }
+.filterTable select {
+  height: 30px;
+  border: 2px solid #d8d8d8;
+  width: 150px;
+  margin: 10px;
+  font-size: 16px;
+}
 #filterBtn {
   font-size: 20px;
   background-color: rgb(238, 40, 40);
