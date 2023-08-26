@@ -481,26 +481,26 @@ header.scrolled {
   font-size: 22px;
 }
 .form-fill {
+  width: 100%;
   padding: 25px;
   display: flex;
   align-items: center;
-  width: 100%;
-  background-color: rgb(255, 50, 91);
-  border-radius: 10px;
-  box-shadow: 0 0 10px black;
+  justify-content: center;
   margin-bottom: 55px;
 }
-.form-fill img {
-  width: 40%;
-  padding: 20px;
-  height: 90vh;
-}
-.form-fill .form-don {
-  width: 60%;
+
+.form-don {
+  width: 50%;
   margin: 10px;
   padding: 15px 12px;
   margin-top: 30px;
-  height: 100%;
+}
+.don-head {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: left;
+  color: rgb(232, 65, 65);
+  padding-bottom: 8px;
 }
 
 .form-don label {
@@ -519,6 +519,7 @@ header.scrolled {
 .gender {
   margin-top: 20px;
   column-gap: 5px;
+  display: flex;
 }
 .gender label,
 input {
@@ -531,19 +532,19 @@ input {
   width: 15%;
   height: 25px;
 }
-.submit {
-  width: 100%;
-  padding-left: 300px;
-}
+
 .submit button {
   font-size: 18px;
   padding: 8px;
-  width: 300px;
+  width: 700px;
   border-radius: 12px;
   text-align: center;
   cursor: pointer;
-  background-color: black;
   color: white;
+  background-image: linear-gradient(to right, #a30000, #f36464);
+}
+.submit button:hover {
+  background-image: linear-gradient(to right, #f36464, #a30000);
 }
 /* ADMIN PANEL CODES */
 .admin {

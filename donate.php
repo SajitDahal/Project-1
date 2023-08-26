@@ -46,9 +46,9 @@ include("Connection.php");
 
         <div class="form-fill">
          
-            <img src="images/fillform.jpg" alt="">
      <div class="form-don">
            <form action="" method="post" >
+            <h1 class="don-head">Create a Donor Account</h1>
   
     <input type="text" id="name" name="name"  class="input-box" placeholder="Full Name" required><br><br>
     
@@ -58,10 +58,15 @@ include("Connection.php");
     
    
     <input id="address" name="address"  class="input-box" placeholder="address" required></input><br><br>
+
+    <input type="password"  id="pwd" name="pwd"  class="input-box" placeholder="Password" required></input><br><br>
+
+    <input type="password"  id="cpwd" name="cpwd"  class="input-box" placeholder="Confirm Password" required></input><br><br>
     
     <label for="dob">Date of Birth:</label>
     <input type="date" id="dob" name="dob" class="input-box" required>
      
+
 
     <div class="bloodgroup">
     <label for="bloodGroup">Blood Group:</label>
