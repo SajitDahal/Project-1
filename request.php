@@ -30,7 +30,7 @@ include("Connection.php");
             <li><a href="banks.html">Find Blood Bank</a></li>
             <li><a href="donate.php">Register as a Donor</a></li>
             <li><a href="request.php">Request</a></li>
-            <li><a href="adminlogin.php">Admin</a></li>
+
 
           </ul>
         </div>

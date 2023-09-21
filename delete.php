@@ -6,7 +6,7 @@ $data = mysqli_query($conn,$query);
 
 if($data){
  ?>
-    <meta http-equiv="refresh" content="0; URL=http://localhost/projectI/admin.php" />
+    <meta http-equiv="refresh" content="0; URL=http://localhost/project1/admin.php" />
 
     <?php
 }

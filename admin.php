@@ -49,7 +49,7 @@ if($total != 0){
         </li>
         <li>
           <i class="fa-solid fa-right-from-bracket"></i
-          ><a href="HomePage.html">Log Out</a>
+          ><a href="HomePage.html" onclick="confirmLogOut()">Log Out</a>
         </li>
       </div>
     </section>
@@ -154,6 +154,9 @@ if($total != 0){
     <script>
  function confirmDelete() {
   return confirm("Are you sure want to delete this data?");
+}
+ function confirmLogOut() {
+  return confirm("Are you sure want to Log Out?");
 }
 </script>
    
