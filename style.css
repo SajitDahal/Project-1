@@ -46,6 +46,7 @@ header.scrolled {
   font-size: 18px;
   position: relative;
 }
+
 .navbar ul li a {
   text-decoration: none;
   color: white;
@@ -65,6 +66,21 @@ header.scrolled {
 .navbar ul li:hover::after {
   width: 100%;
   color: black;
+  text-align: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  right: 8.5%;
+  width: 200px;
+  padding: 15px;
+  height: 90px;
+  line-height: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .logo {
   margin: 0;
@@ -516,6 +532,18 @@ header.scrolled {
   font-size: 18px;
   padding: 0 15px;
 }
+
+.input-box.success {
+  border-color: rgb(88, 243, 88);
+}
+.input-box.error {
+  border-color: red;
+}
+.error-msg {
+  color: red;
+  font-size: 9px;
+  height: 13px;
+}
 .gender {
   margin-top: 20px;
   column-gap: 5px;
@@ -546,6 +574,7 @@ input {
 .submit button:hover {
   background-image: linear-gradient(to right, #f36464, #a30000);
 }
+
 /* ADMIN PANEL CODES */
 .admin {
   width: 100%;

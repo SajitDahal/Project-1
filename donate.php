@@ -47,21 +47,34 @@ include("Connection.php");
         <div class="form-fill">
          
      <div class="form-don">
-           <form action="" method="post" >
+           <form id="regForm" action="" method="post" >
             <h1 class="don-head">Create a Donor Account</h1>
   
-    <input type="text" id="name" name="name"  class="input-box" placeholder="Full Name" required><br><br>
+    <input type="text" id="name" name="name"  class="input-box" placeholder="Full Name" required>
+    <div class="error-msg"></div>
+    <br><br>
     
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="input-box" placeholder="phone" required><br><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="input-box" placeholder="phone" required>
+    <div class="error-msg"></div>
+    <br><br>
 
-    <input type="email" id="email" name="email" class="input-box" placeholder="Email" required><br><br>
+    <input type="text" id="email" name="email" class="input-box" placeholder="Email" required>
+    <div class="error-msg"></div>
+    <br><br>
     
    
-    <input id="address" name="address"  class="input-box" placeholder="address" required></input><br><br>
+    <input id="address" name="address"  class="input-box" placeholder="address" required></input>
+    <div class="error-msg"></div>
+    <br><br>
 
-    <input type="password"  id="pwd" name="pwd"  class="input-box" placeholder="Password" required></input><br><br>
+    <input type="password"  id="pwd" name="pwd"  class="input-box" placeholder="Password" required></input>
+    <div class="error-msg"></div>
+    <br><br>
 
-    <input type="password"  id="cpwd" name="cpwd"  class="input-box" placeholder="Confirm Password" required></input><br><br>
+    <input type="password"  id="cpwd" name="cpwd"  class="input-box" placeholder="Confirm Password" required></input>
+    <div class="error-msg"></div>
+    <br><br>
+    
     
     <label for="dob">Date of Birth:</label>
     <input type="date" id="dob" name="dob" class="input-box" required>
@@ -100,7 +113,7 @@ include("Connection.php");
     <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
     <label for="agreeTerms" style="font-weight: 300;">I agree to the <a href="#">terms</a> and <a href="#">conditions</a></label><br><br>
     
-    <div class="submit"><button type="submit" name="submit" >Submit</button></div>
+    <div class="submit"><button id="regBtn" type="submit" name="submit" >Submit</button></div>
     
   </form>
      </div>
@@ -135,6 +148,7 @@ include("Connection.php");
     </a>
 
     <script src="index.js"></script>
+    <script src="validateForm.js"></script>
   </body>
 </html>
 <?php
@@ -146,8 +160,9 @@ include("Connection.php");
   $dob = $_POST["dob"];
   $bg = $_POST["bg"];
   $gender = $_POST["gender"];
+  $pwd = $_POST["pwd"];
 
-  $query = "INSERT INTO donor VALUES('$name','$phone','$email','$address','$dob','$bg','$gender')";
+  $query = "INSERT INTO donor VALUES('$name','$phone','$email','$address','$dob','$bg','$gender','$pwd')";
   $data = mysqli_query($conn,$query);
 
   if($data){

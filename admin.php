@@ -129,8 +129,8 @@ if($total != 0){
               <td>".$result['phone']."</td>
               <td>".$result['email']."</td>
               <td>".$result['address']."</td>
-              <td>".$result['dateofbirth']."</td>
-              <td>".$result['bloodgroup']."</td>
+              <td>".$result['dob']."</td>
+              <td>".$result['bg']."</td>
               <td>".$result['gender']."</td>
               
              
