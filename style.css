@@ -605,6 +605,9 @@ input {
 #menu .items li:nth-child(n):hover {
   border-left: 4px solid white;
 }
+#menu .items li:nth-child(n).active {
+  border-left: 4px solid white;
+}
 #menu .items li i {
   color: rgb(134, 141, 151);
   width: 30px;
@@ -648,8 +651,6 @@ input {
   justify-content: flex-start;
   align-items: center;
   padding: 10px 14px;
-  border: 1px solid #d7dbe6;
-  border-radius: 4px;
 }
 #interface .navigation .search i {
   margin-right: 14px;
@@ -813,4 +814,60 @@ tbody tr td {
   border-radius: 8px;
   margin-left: 200px;
   cursor: pointer;
+}
+
+/* css for viewprofile */
+
+.profile-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info label {
+  font-weight: bold;
+}
+
+.profile-info input,
+.profile-info select {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gender-options {
+  display: flex;
+  margin-bottom: 10px;
+}
+.gender-options label {
+  padding: 10px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }

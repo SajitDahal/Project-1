@@ -161,7 +161,7 @@ include("Connection.php");
   $gender = $_POST["gender"];
   $pwd = $_POST["pwd"];
 
-  $query = "INSERT INTO donor VALUES('$name','$phone','$email','$address','$dob','$bg','$gender','$pwd')";
+  $query = "INSERT INTO donor VALUES('$id','$name','$phone','$email','$address','$dob','$bg','$gender','$pwd')";
   $data = mysqli_query($conn,$query);
 
   if($data){

@@ -32,7 +32,7 @@ if($total != 0){
         <a href="HomePage.html">Blood<span> Bridge</span></a>
       </div>
       <div class="items">
-        <li>
+        <li class="active">
           <i class="fa-solid fa-gauge-high"></i
           ><a href="admin.php">Dashboard</a>
         </li>
@@ -57,8 +57,9 @@ if($total != 0){
       <div class="navigation">
         <div class="n1">
           <div class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="search" />
+            <!-- <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="search" /> -->
+            <h1>Hello Admin!</h1>
           </div>
         </div>
         <div class="profile">
