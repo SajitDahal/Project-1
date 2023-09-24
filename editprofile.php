@@ -146,17 +146,9 @@ else{
                   ?>>AB-</option>
                 </select>
 
-                <div class="gender-options">
-                    <label for="gender">Gender:</label>
-                    <label for="male">Male:</label>
-                    <input type="radio" id="male" name="gender" value="Male" required>
-                    
-                    <label for="female">Female:</label>
-                    <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" value="<?php echo $gender; ?>">
 
-                    <label for="others">Others:</label>
-                    <input type="radio" id="others" name="gender" value="Others" required>
-                </div>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" value="<?php echo $pwd?>">
