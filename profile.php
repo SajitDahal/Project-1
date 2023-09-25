@@ -26,35 +26,6 @@ else{
   // echo"usernot FOund";
 }
 
-//updating profile data
-
-  if(isset($_POST['submit'])){
-
-        $newName = $_POST['newname'];
-        $newPhone =$_POST['newphone'];
-        $newEmail = $_POST['newemail'];
-        $newAddress = $_POST['newaddress'];
-        $newdob = $_POST['newdob'];
-        $newbg = $_POST['newbg'];
-        $newGender =$_POST['newgender'];
-        $newpwd = $_POST['newpassword'];
-
-        $updatesql = "UPDATE `donor` SET `name`='$newName',`phone`='$newPhone',`email`='$newEmail',`address`='$newAddress',`dob`='$newdob',`bg`='$newbg',`gender`='$newGender',`password`='$newpwd' WHERE `id`= '$userid'";
-
-        
-
-        if ($conn->query($updatesql) === TRUE) {
-       
-          header('location:profile.php');
-          echo "<script>window.alert('Data successfully updated!!');</script>";
-          
-        exit();
-      } else {
-        echo "<script> window.alert('Error in updating the data');</script>";
-      }
-    }
-
-
   ?>
 
   
@@ -64,7 +35,7 @@ else{
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -105,25 +76,25 @@ else{
       <!-- Code to display profile data here -->
          <div class="profile-card">
         <h2>Donor Profile</h2>
-        <form action="editprofile.php" method="post">
+        <form>
             <div class="profile-info">
                 <label for="name">Name:</label>
-                <input type="text" id="newname" name="newname" value="<?php echo $name; ?>" required>
+                <input type="text" id="name" name="name" value="<?php echo $name; ?>" required>
                 
                 <label for="phone">Phone:</label>
-                <input type="tel" id="newphone" name="newphone" value="<?php echo $phone; ?>" required>
+                <input type="tel" id="phone" name="phone" value="<?php echo $phone; ?>" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="newemail" name="newemail" value="<?php echo $email; ?>" required>
+                <input type="email" id="email" name="email" value="<?php echo $email; ?>" required>
 
                 <label for="address">Address:</label>
-                <input type="text" id="newaddress" name="newaddress" value="<?php echo $address; ?>" required>
+                <input type="text" id="address" name="address" value="<?php echo $address; ?>" required>
 
                 <label for="dob">Date of Birth:</label>
-                <input type="date" id="newdob" name="newdob" value="<?php echo $dob; ?>" required>
+                <input type="date" id="dob" name="dob" value="<?php echo $dob; ?>" required>
 
                 <label for="blood-group">Blood Group:</label>
-                <select id="newbg" name="newbg" >
+                <select id="blood-group" name="blood-group" >
                    <option value="not selected">Select:</option required>
                     <option value="A+"
                     <?php
@@ -176,13 +147,16 @@ else{
                 </select>
 
                 <label for="gender">Gender</label>
-                <input type="text" id="newgender" name="newgender" value="<?php echo $gender; ?>" required>
+                <input type="text" id="gender" name="gender" value="<?php echo $gender; ?>" required>
 
 
                 <label for="password">Password:</label>
-                <input type="password" id="newpassword" name="newpassword" value="<?php echo $pwd?>">
+                <input type="password" id="password" name="password" value="<?php echo $pwd?>">
             </div>
-           <input type="submit" name="submit" class="submit-button" value="Update">
+            <div class="submit-button">
+              <a href="editprofile.php">Edit</a>
+            </div>
+            
         </form>
     </div>
 

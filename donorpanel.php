@@ -65,7 +65,7 @@ if($total != 0){
         </li>
         <li>
           <i class="fa-regular fa-address-book"></i
-          ><a href="editprofile.php">Profile</a>
+          ><a href="profile.php">Profile</a>
         </li>
 
         <li>
