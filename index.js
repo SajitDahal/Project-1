@@ -30,27 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const table = document.getElementById("bankList");
   const errMsg = document.getElementById("errMsg");
 
-  filterBtn.addEventListener("click", function () {
-    const selectedValue = filterTable.value;
+  if (filterBtn) {
+    filterBtn.addEventListener("click", function () {
+      const selectedValue = filterTable.value;
 
-    const rows = table.getElementsByTagName("tr");
-    let found = false;
-    for (let i = 1; i < rows.length; i++) {
-      const row = rows[i];
-      const cell = row.getElementsByTagName("td")[2];
+      const rows = table.getElementsByTagName("tr");
+      let found = false;
+      for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        const cell = row.getElementsByTagName("td")[2];
 
-      if (selectedValue === "all" || cell.textContent === selectedValue) {
-        row.style.display = "";
-        found = true;
-      } else {
-        row.style.display = "none";
+        if (selectedValue === "all" || cell.textContent === selectedValue) {
+          row.style.display = "";
+          found = true;
+        } else {
+          row.style.display = "none";
+        }
       }
-    }
 
-    if (found) {
-      errMsg.style.display = "none";
-    } else {
-      errMsg.style.display = "block";
-    }
-  });
+      if (found) {
+        errMsg.style.display = "none";
+      } else {
+        errMsg.style.display = "block";
+      }
+    });
+  }
 });
